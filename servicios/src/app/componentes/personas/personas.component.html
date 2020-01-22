@@ -1,0 +1,20 @@
+<table>
+    <thead>
+        <tr>
+            <th>#</th>
+           <th>Nombre</th> 
+           <th>Descripcion</th> 
+           <th>Edad</th> 
+           <th>Curso</th> 
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let persona of personas ; let i = index">
+            <td>{{i}}</td>
+            <td>{{persona.nombre}}</td>
+            <td>{{persona.decripcion}}</td>
+            <td>{{persona.edad}}</td>
+            <td>{{persona.curso}}</td>
+        </tr>
+    </tbody>
+</table>

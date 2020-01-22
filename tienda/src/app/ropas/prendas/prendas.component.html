@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="titulo mt-4">
+        <h2 class="d-inline">Encuentra estos modelos </h2> <h5 class="d-inline-block">y más ...</h5>
+    </div>
+    <hr>
+    <div class="row">  
+        <div class="card-columns">
+
+            <div class="card" *ngFor = "let ropa of ropas">
+                <img src="{{ropa.img}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{ropa.nombre}}</h5>
+                    <p class="card-text">{{ropa.bio}}</p>
+                    <button type="button" class="btn btn-outline-primary btn-lg btn-block">ver mas...</button>
+                </div>
+            </div>        
+        </div>         
+    </div>
+</div>
