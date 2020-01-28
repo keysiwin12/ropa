@@ -8,11 +8,13 @@ import { AboutComponent } from './about/about.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { app_routing } from './ropas.routes';
 import { RopasService } from './servicios/ropas.service';
+import { HeaderComponent } from './header/header.component';
+import { DetalleComponent } from './detalle/detalle.component';
 
 
 
 @NgModule({
-  declarations: [RopasComponent, FooterComponent, PrendasComponent, HomeComponent, AboutComponent, PagenotfoundComponent],
+  declarations: [RopasComponent, FooterComponent, PrendasComponent, HomeComponent, AboutComponent, PagenotfoundComponent, HeaderComponent, DetalleComponent],
   imports: [
     CommonModule,app_routing
   ],

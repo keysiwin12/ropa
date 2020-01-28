@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RopasService } from '../servicios/ropas.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-prendas',
@@ -8,7 +9,7 @@ import { RopasService } from '../servicios/ropas.service';
 })
 export class PrendasComponent implements OnInit {
 
-  constructor(private ropasService : RopasService) {
+  constructor(private ropasService : RopasService , private router : Router) {
     this.ropas = ropasService.getRopas();
    }
 
@@ -17,4 +18,9 @@ export class PrendasComponent implements OnInit {
     console.log(this.ropas);
   }
 
+
+  verDetalle(nombre : string) {
+    console.log(nombre);
+    this.router.navigate(['ropas',nombre]);
+  }
 }
