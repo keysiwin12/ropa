@@ -11,7 +11,15 @@ export class RopasService {
     {
       nombre: "camisa",
       bio: "De acuerdo con los arqueólogos y antropólogos, los signos de vestimenta más antiguos probablemente consistieron en pieles, cueros, hojas o pasturas, envueltas o atadas alrededor del cuerpo como protección de los elementos de la naturaleza, 50000 a. C. El conocimiento sobre estas ropas es una deducción, ya que los materiales mencionados se deterioran rápidamente comparados con piedra, hueso, caparazones y artefactos metálicos. Desde el principio de los tiempos hasta nuestros días, la vestimenta ha sufrido numerosas transformaciones que en la mayoría de los casos han sido debidas al descubrimiento de nuevos tejidos y materiales e, indudablemente, a las tendencias que dictan los diseñadore.",
-      img: "assets/img/polera.jpg",
+      img: "assets/img/camisa.jpg",
+      creacion: "1957-12-10",
+      fabrica: "asc"
+
+    },
+    {
+      nombre: "camisa",
+      bio: "De acuerdo con los arqueólogos y antropólogos, los signos de vestimenta más antiguos probablemente consistieron en pieles, cueros, hojas o pasturas, envueltas o atadas alrededor del cuerpo como protección de los elementos de la naturaleza, 50000 a. C. El conocimiento sobre estas ropas es una deducción, ya que los materiales mencionados se deterioran rápidamente comparados con piedra, hueso, caparazones y artefactos metálicos. Desde el principio de los tiempos hasta nuestros días, la vestimenta ha sufrido numerosas transformaciones que en la mayoría de los casos han sido debidas al descubrimiento de nuevos tejidos y materiales e, indudablemente, a las tendencias que dictan los diseñadore.",
+      img: "assets/img/camisa2.jpg",
       creacion: "1957-12-10",
       fabrica: "asc"
 

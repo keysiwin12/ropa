@@ -10,19 +10,23 @@ import { app_routing } from './ropas.routes';
 import { RopasService } from './servicios/ropas.service';
 import { HeaderComponent } from './header/header.component';
 import { DetalleComponent } from './detalle/detalle.component';
-
+import { SearchComponent } from './search/search.component';
+import {FormsModule} from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
-  declarations: [RopasComponent, FooterComponent, PrendasComponent, HomeComponent, AboutComponent, PagenotfoundComponent, HeaderComponent, DetalleComponent],
+  declarations: [RopasComponent, FooterComponent, PrendasComponent, HomeComponent, AboutComponent, PagenotfoundComponent, HeaderComponent, DetalleComponent, SearchComponent],
   imports: [
-    CommonModule,app_routing
+    CommonModule,app_routing,FormsModule,
+    NgbModule
   ],
   exports : [
     RopasComponent
   ],
   providers : [
     RopasService
-  ]
+  ],
+
 })
 export class RopasModule { }

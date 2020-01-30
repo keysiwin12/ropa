@@ -18,7 +18,6 @@ export class PrendasComponent implements OnInit {
     console.log(this.ropas);
   }
 
-
   verDetalle(nombre : string) {
     console.log(nombre);
     this.router.navigate(['ropas',nombre]);

@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppComponent } from './app.component';
 import { RopasModule } from './ropas/ropas.module';
 @NgModule({
@@ -9,7 +8,8 @@ import { RopasModule } from './ropas/ropas.module';
   ],
   imports: [
     BrowserModule,
-    RopasModule
+    RopasModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
