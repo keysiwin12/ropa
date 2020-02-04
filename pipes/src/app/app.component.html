@@ -1,0 +1,100 @@
+<div class="container">
+  <div class="row mt-3">
+    <div class="col">
+      <h2 class="text-center mb-3">pipes</h2>
+      <table class="table table-dark">
+        <thead>
+          <tr>
+            <th scope="col">Variables</th>
+            <th scope="col">pipes</th>
+            <th scope="col">productos</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr >
+            <td>{{nombre}}</td>
+            <td>uppercase</td>
+            <td>{{nombre | uppercase}}</td>
+          </tr>
+          <tr>
+            <td>{{apellido}}</td>
+            <td>lowercase</td>
+            <td>{{apellido | lowercase}}</td>
+          </tr>
+          <tr>
+            <td>{{nombre}}</td>
+            <td>slice</td>
+            <td>{{nombre |slice : 1-3}}</td>
+          </tr>
+          <tr>
+            <td>{{decimal}}</td>
+            <td>number</td>
+            <td>{{decimal | number}}</td>         <!-- por defecto 3 decimales  -->
+          </tr>
+          <tr>
+            <td>{{decimal}}</td>
+            <td>number : '1.0-2'</td>
+            <td>{{decimal | number: '1.0-2'}}</td>
+          </tr>
+          <tr>
+            <td>{{porcentaje}}</td>
+            <td>percent</td>
+            <td>{{porcentaje | percent}}</td>
+          </tr>
+          <tr>
+            <td>{{porcentaje}}</td>
+            <td>percent:'1.0-2'</td>
+            <td>{{porcentaje | percent:'1.0-3'}}</td>
+          </tr>
+          <tr>
+            <td>{{dinero}}</td>
+            <td>currency</td>
+            <td>{{dinero | currency}}</td>
+          </tr>
+          <tr>
+            <td>{{dinero}}</td>
+            <td>currency euro</td>
+            <td>{{dinero | currency : "EUR"}}</td>
+          </tr>
+          <tr>
+            <td>{{fecha}}</td>
+            <td>date</td>
+            <td>{{fecha | date}}</td>
+          </tr>
+          <tr>
+            <td>{{fecha}}</td>
+            <td>date : 'medium'</td>
+            <td> {{fecha | date : 'medium'}}</td>
+          </tr>
+          <tr>
+            <td>{{ejemplo}}</td>
+            <td>palabra</td>
+            <td>{{ejemplo | palabra}}</td>
+          </tr>
+          <tr>
+             <td >{{contra}}</td>
+            <td><button class="btn btn-primary" (click) = "ocultarVer()">ocultar/ver</button></td>          
+            <!-- <td><input [type]="contra2" disabled value="{{contra|ocultar:boolVer}}"></td> -->
+            <td><input [type]= "contra2 | ocultar:boolVer" disabled value="{{contra}}"></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div>
+        <h2 class="text-center pt-2">Slice(array)</h2>
+        <div>{{numeros}}</div>
+        <div>{{numeros |slice : 1-3}}</div>
+        <ul>
+          <li>{{numeros |slice : 1:5}}</li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="text-center pt-5">Json</h2>
+        <pre>
+          {{ejempJson | json}}
+        </pre>
+      </div>
+    </div>
+  </div>
+</div>
