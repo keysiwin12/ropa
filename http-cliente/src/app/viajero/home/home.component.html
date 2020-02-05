@@ -1,0 +1,21 @@
+<h1 class="text-center">Paises</h1>
+
+
+<div class="container">
+    <div class="card-columns">
+        <div class="card" *ngFor = "let pais of paises">
+          <img [src]="pais.flag" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{pais.name}}</h5>
+
+
+
+            <span class="badge badge-warning ml-2" *ngFor = "let lenguaje of pais.languages" >
+                {{lenguaje.name}}
+            </span>
+            
+          </div>
+        </div>
+        
+    </div>
+</div>
