@@ -9,7 +9,6 @@ import { RopasModule } from './ropas/ropas.module';
   imports: [
     BrowserModule,
     RopasModule,
-
   ],
   providers: [],
   bootstrap: [AppComponent]

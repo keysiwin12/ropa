@@ -5,14 +5,15 @@ import { HomeComponent } from './home/home.component';
 import { BuscarComponent } from './buscar/buscar.component';
 import { SpotifyComponent } from './spotify.component';
 import { app_routing } from './spotify.routes';
-
+import {FormsModule} from '@angular/forms';
 
 
 @NgModule({
   declarations: [HeaderComponent, HomeComponent, BuscarComponent,SpotifyComponent],
   imports: [
     CommonModule,
-    app_routing
+    app_routing,
+    FormsModule
   ],
   exports : [
     SpotifyComponent
