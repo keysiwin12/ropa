@@ -9,9 +9,6 @@ import { SpotifyService } from '../services/spotify.service';
 export class BuscarComponent implements OnInit {
 
   constructor(private spotifyService : SpotifyService) {
-    // this.spotifyService.searchData('muse','artist').subscribe(response => {
-    //   // console.log(response);     
-    // })
       
    }
 
@@ -19,13 +16,17 @@ export class BuscarComponent implements OnInit {
   }
   
   public name : string = '';
+  public boolImage : false ;
 
   public albums ;
   onSearch(event) {
     console.log(this.name)
     this.spotifyService.searchData(this.name, 'artist').subscribe(response => {
-      console.log(response['artists']);
-      this.albums = response['artists'].items
+      this.albums = response;
+      
+      console.log(this.albums)
     })
   }
+
+
 }

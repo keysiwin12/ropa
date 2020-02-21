@@ -11,10 +11,13 @@ export class HomeComponent implements OnInit {
   public albums
   constructor(private _servicio:SpotifyService) { 
     this._servicio.getData().subscribe(data => {
-      this.albums = data['albums'].items;
-      console.log(this.albums);
-      
-    });
+      this.albums = data;
+      console.log(this.albums); 
+    },
+    error => {
+      console.log(error.error);
+    }
+    );
   }
 
   ngOnInit() {

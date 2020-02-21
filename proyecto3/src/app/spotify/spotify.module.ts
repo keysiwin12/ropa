@@ -6,10 +6,11 @@ import { BuscarComponent } from './buscar/buscar.component';
 import { SpotifyComponent } from './spotify.component';
 import { app_routing } from './spotify.routes';
 import {FormsModule} from '@angular/forms';
+import { NoImagePipe } from './pipe/no-image.pipe';
 
 
 @NgModule({
-  declarations: [HeaderComponent, HomeComponent, BuscarComponent,SpotifyComponent],
+  declarations: [HeaderComponent, HomeComponent, BuscarComponent,SpotifyComponent, NoImagePipe],
   imports: [
     CommonModule,
     app_routing,
