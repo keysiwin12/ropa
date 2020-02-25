@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SpotifyService } from '../services/spotify.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -9,10 +10,13 @@ import { SpotifyService } from '../services/spotify.service';
 export class HomeComponent implements OnInit {
 
   public albums
-  constructor(private _servicio:SpotifyService) { 
+  constructor(private _servicio:SpotifyService , private router : Router) { 
     this._servicio.getData().subscribe(data => {
       this.albums = data;
       console.log(this.albums); 
+      for(let album of this.albums) {
+        console.log(album.artists[0].id);
+      }
     },
     error => {
       console.log(error.error);
@@ -23,4 +27,9 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
+
+  verArtista(id) {
+    console.log(id);
+    this.router.navigate(['artist',id]);
+  }
 }
