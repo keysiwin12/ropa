@@ -10,30 +10,46 @@ import { SpotifyService } from '../services/spotify.service';
 export class ArtistComponent implements OnInit {
 
   public artist
-  public imagen;
+  public imagen = '';
   public id;
+  public name: string = ''
+  public headersTable: string[] = ['Foto' , 'Album' , 'Cancion' , 'Vista Previa']
+  public tracks: Object[] = [];
   constructor(private _ac : ActivatedRoute , private spotifyService : SpotifyService) {
     this._ac.params.subscribe(response => {
       console.log(response);
       this.id = response.id;
-      console.log(this.id)
-      this.spotifyService.getArtist(this.id).subscribe(data => {
-        console.log(data);
-        this.artist = data;
-        this.imagen = this.artist.images[0].url;      
-      } ,
-      error => {
-        console.log(error.error);
+      if(this.id) {
+        this.spotifyService.getArtist(this.id).subscribe(data => {
+          console.log(data);
+          this.artist = data;
+          this.imagen = this.artist.images[0].url;
+          this.name = this.artist.name;      
+        } ,
+        error => {
+          console.log(error.error);
+        }
+        )
+        this.spotifyService.getTracks(this.id).subscribe(data => {
+          this.tracks = data;
+          console.log(this.tracks)
+          for(let track of this.tracks) {
+            console.log(track['external_urls'].spotify);
+          }
+        })
       }
-      )
+
     })
   }
 
+  
 
   ngOnInit() {
   
   }
 
-
+  regresar() {
+    window.history.back();
+  }
   
 }
