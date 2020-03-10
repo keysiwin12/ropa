@@ -15,7 +15,9 @@ export class ArtistComponent implements OnInit {
   public name: string = ''
   public headersTable: string[] = ['Foto' , 'Album' , 'Cancion' , 'Vista Previa']
   public tracks: Object[] = [];
+  public loading: boolean;
   constructor(private _ac : ActivatedRoute , private spotifyService : SpotifyService) {
+    this.loading = true
     this._ac.params.subscribe(response => {
       console.log(response);
       this.id = response.id;
@@ -33,6 +35,7 @@ export class ArtistComponent implements OnInit {
         this.spotifyService.getTracks(this.id).subscribe(data => {
           this.tracks = data;
           console.log(this.tracks)
+          this.loading = false;
           for(let track of this.tracks) {
             console.log(track['external_urls'].spotify);
           }

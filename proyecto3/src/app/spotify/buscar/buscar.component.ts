@@ -18,17 +18,21 @@ export class BuscarComponent implements OnInit {
   
   public name : string = '';
   public boolImage : false ;
-
+  public loading : boolean ;
   public albums ;
   onSearch(event) {
-    console.log(this.name)
-    this.spotifyService.searchData(this.name, 'artist').subscribe(response => {
-      this.albums = response;
-      console.log(this.albums)
-      for(let album of this.albums) {
-        console.log(album.id);
-      }
-    })
+    if(this.name) {
+      this.loading = true;
+      console.log(this.name)
+      this.spotifyService.searchData(this.name, 'artist').subscribe(response => {
+        this.albums = response;
+        console.log(this.albums)
+        this.loading = false;
+        for(let album of this.albums) {
+          console.log(album.id);
+        }
+      })
+    }
   }
 
   verArtista(id) { 

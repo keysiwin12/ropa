@@ -9,10 +9,12 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
-  public albums
+  public albums ;
+  public loading: boolean = true; ; 
   constructor(private _servicio:SpotifyService , private router : Router) { 
     this._servicio.getData().subscribe(data => {
       this.albums = data;
+      this.loading = false;
       console.log(this.albums); 
       for(let album of this.albums) {
         console.log(album.artists[0].id);

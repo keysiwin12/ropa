@@ -8,10 +8,11 @@ import { app_routing } from './spotify.routes';
 import {FormsModule} from '@angular/forms';
 import { NoImagePipe } from './pipe/no-image.pipe';
 import { ArtistComponent } from './artist/artist.component';
+import { LoadingComponent } from './loading/loading.component';
 
 
 @NgModule({
-  declarations: [HeaderComponent, HomeComponent, BuscarComponent,SpotifyComponent, NoImagePipe, ArtistComponent],
+  declarations: [HeaderComponent, HomeComponent, BuscarComponent,SpotifyComponent, NoImagePipe, ArtistComponent, LoadingComponent],
   imports: [
     CommonModule,
     app_routing,
